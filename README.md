@@ -33,6 +33,6 @@ If you wish, you can also use Docker to achieve the same. First, pull the image 
 And run the container:
 `docker run --env ES_USERNAME="<username>" --env ES_PASSWORD="<password>" --env KIBANA_ENDPOINT="<kb-endpoint>" --env KIBANA_SPACE_NAMES="default,space1" docker.elastic.co/observability/slo-upgrade-helper:1.0`
 
-Following this, you should no longer encounter Outdated SLO notifications, allowing you to seamlessly resume using the SLOs and benefit from the enhancements.
+Following this, you should no longer encounter Outdated SLO notifications, allowing you to seamlessly resume using the SLOs and benefit from the enhancements in the 8.12.0.
 
 Happy SLO!
