@@ -7,9 +7,10 @@ username = os.getenv('ES_USERNAME')
 password = os.getenv('ES_PASSWORD')
 kibana_endpoint = os.getenv('KIBANA_ENDPOINT')
 kibana_space_names = os.getenv('KIBANA_SPACE_NAMES', '').split(',')  
+kibana_port = os.getenv('KIBANA_PORT', 9243)
 
 for space_name in kibana_space_names:
-    conn = http.client.HTTPSConnection(kibana_endpoint, 9243)
+    conn = http.client.HTTPSConnection(kibana_endpoint, kibana_port)
 
     credentials = f"{username}:{password}"
     encoded_credentials = base64.b64encode(credentials.encode()).decode("ascii")
