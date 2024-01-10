@@ -28,8 +28,9 @@ Reset SLO ID 913bd430-afb6-11ee-aa14-41a0143c7520 in Space 'default': 200 - {"na
 
 ### Docker
 
-If you wish, you can also use Docker to achieve the same:
+If you wish, you can also use Docker to achieve the same. First, pull the image `docker pull docker.elastic.co/observability/slo-upgrade-helper:1.0`.
 
+And run the container:
 `docker run --env ES_USERNAME="<username>" --env ES_PASSWORD="<password>" --env KIBANA_ENDPOINT="<kb-endpoint>" --env KIBANA_SPACE_NAMES="default,space1" docker.elastic.co/observability/slo-upgrade-helper:1.0`
 
 Following this, you should no longer encounter Outdated SLO notifications, allowing you to seamlessly resume using the SLOs and benefit from the enhancements.
