@@ -12,9 +12,9 @@ This code essentially resets all the configured SLOs, sparing you the need to re
 Export the following environment variables:
 - `export ES_USERNAME=<your-es-user>`
 - `export ES_PASSWORD=<password>`
-- `export KIBANA_ENDPOINT=<kibana-url>`
-- `export KIBANA_PORT=<port>` (if you don't specify it 9243 will be used)
-- `export KIBANA_SPACE_NAMES="default"` (in case you have more Kibana spaces, specify it in this list (eg, "default, space1,space2")
+- `export KIBANA_ENDPOINT=<kibana-url>` (make sure to add only the name, if the URL is https://slo-test-44.kb.us-west2.gcp.elastic-cloud.com:9243/), the value of the environment variable should be: `slo-test-44.kb.us-west2.gcp.elastic-cloud.com`)
+- `export KIBANA_PORT=<port>` (if you don't specify it, 9243 will be used)
+- `export KIBANA_SPACE_NAMES="default"` (in case you have more Kibana spaces, specify it in this list (eg, "default, space1, space2")
 
 Running the code `python slo_upgrade_helper.py`:
 ```
